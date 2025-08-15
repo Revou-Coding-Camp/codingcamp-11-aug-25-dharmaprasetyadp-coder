@@ -43,60 +43,185 @@
     <hr />
 
  
-    <!-- Main Content -->
-    </main>
-    <!-- Utama -->
-    <section id="utama" class="h-[400px] bg-gray-50">
-    <div class="flex items-center justify-center h-[400px]">
-        <h1 class="text-4xl font-bold text-gray-800">Welcome <span id="user-tamu"></span> to Portofolio Dharma</h1>
-    </div>
+<!-- Utama -->
+<section id="utama" class="h-auto bg-black py-10">
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold text-white text-center">
+      Welcome <span id="user-tamu"></span> to Portofolio Dharma
+    </h1>
+
+    <!-- Gambar -->
+    <img src="Atribut/Untitled-1.jpg" alt="Gambar Utama"
+         class="mt-6 w-[1366px] h-[578px] max-w-full object-cover rounded-lg shadow-lg">
+  </div>
 </section>
+
     <hr />
 
-    <!-- Tentang -->
-    <section id="tentang" class="text-center h-[400px] bg-gray-200">
-    <header>    
-        <h1 class="text-4xl font-bold text-gray-800">Tentang Saya</h1>
-    </header>
-    <p class="text-gray-600">
-        Saya adalah seorang ilustrator desain dengan pengalaman dalam menciptakan karya seni yang menarik dan kreatif.
-    </p>
+<!-- Tentang Saya -->
+<section id="tentang" class="bg-white-500 py-10">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10 px-6">
+    <!-- Deskripsi -->
+    <div class="flex-1 text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+      <p class="text-gray-700">
+        Saya adalah seorang ilustrator desain dengan pengalaman dalam menciptakan karya seni
+        yang menarik dan kreatif.
+      </p>
+    </div>
+
+    <!-- Profil -->
+    <div class="flex flex-col items-center md:items-center">
+      <!-- Foto Profil -->
+      <div class="w-40 h-40 rounded-full border border-gray-400 overflow-hidden">
+        <img src="Atribut\11.png">
+      </div>
+      <!-- Info Profil -->
+      <div class="mt-4 text-center text-gray-700">
+        <p><strong>Nama:</strong> Dharma</p>
+        <p><strong>Umur:</strong> 32 tahun</p>
+        <p><strong>Profesi:</strong> Ilustrator & Desainer</p>
+        <p><strong>Provinsi:</strong> Bali
+      </div>
+    </div>
+  </div>
+</section>
 </section>
 
    <hr />
 
-    <!-- Proyek -->
-    <section id="proyek" class="text-center h-[400px] bg-gray-100">
-    <header>
-        <h1 class="text-4xl font-bold text-gray-800">Proyek Saya</h1>
-    </header>
+ <!-- Proyek -->
+<section id="proyek" class="text-center h-[600px] bg-gray-100 py-10">
+  <header>
+    <h1 class="text-4xl font-bold text-gray-800 mb-2">Proyek Saya</h1>
+  </header>
 
-    <p class="text-gray-600">
-        Berikut adalah beberapa proyek yang telah saya kerjakan:
-    </p>
+  <p class="text-gray-600">
+    Berikut adalah beberapa proyek yang telah saya kerjakan:
+  </p>
+
+<!-- Proyek ilustrasi -->
+<div class="mt-10">
+  <div class="flex flex-wrap justify-center gap-10">
+    <!-- Karya 1 -->
+    <div class="flex flex-col items-center">
+      <div class="w-48 h-32 sm:w-60 sm:h-40 md:w-72 md:h-48 lg:w-80 lg:h-56 border overflow-hidden">
+        <img src="atribut/c.png" alt="Karya 1"
+             class="w-full h-full object-cover cursor-pointer"
+             onclick="openModal(this.src)">
+      </div>
+      <span class="mt-2">Karya 1</span>
+    </div>
+
+    <!-- Karya 2 -->
+    <div class="flex flex-col items-center">
+      <div class="w-48 h-32 sm:w-60 sm:h-40 md:w-72 md:h-48 lg:w-80 lg:h-56 border overflow-hidden">
+        <!-- Jika belum sempat ganti nama file, gunakan encoding spasi: %20 -->
+        <img src="atribut/Screenshot%202025-08-15%20194254.png" alt="Karya 2"
+             class="w-full h-full object-cover cursor-pointer"
+             onclick="openModal(this.src)">
+      </div>
+      <span class="mt-2">Karya 2</span>
+    </div>
+
+    <!-- Karya 3 -->
+    <div class="flex flex-col items-center">
+      <div class="w-48 h-32 sm:w-60 sm:h-40 md:w-72 md:h-48 lg:w-80 lg:h-56 border overflow-hidden">
+        <img src="atribut/upload%202.jpg" alt="Karya 3"
+             class="w-full h-full object-cover cursor-pointer"
+             onclick="openModal(this.src)">
+      </div>
+      <span class="mt-2">Karya 3</span>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen -->
+<div id="imgModal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
+  <button class="absolute top-4 right-5 text-white text-3xl leading-none" onclick="closeModal()">×</button>
+  <img id="modalImg" src="" alt="Full View" class="max-w-[90%] max-h-[90%] rounded-md shadow-lg">
+</div>
+
 </section>
 
    <hr />
 
-    <!-- Kontak -->
-       <section id="kontak" class="h-[400px] bg-gray-300">
-   <header>
-       <h1 class="text-4xl font-bold text-gray-800">Kontak Saya</h1>
-   </header>
+<!-- Kontak -->
+<section id="kontak" class="bg-gray-300 py-10">
+  <header class="mb-6">
+    <h1 class="text-4xl font-bold text-gray-800 text-center mb-2">Kontak Saya</h1>
+    <p class="text-gray-600 text-center">
+      Jika Anda ingin menghubungi saya, silakan email ke
+      <a href="mailto:dharmaprasetya.dp@gmail.com" class="underline">dharmaprasetya.dp@gmail.com</a>.
+    </p>
+  </header>
 
-   <p class="text-gray-600">
-       Jika Anda ingin menghubungi saya, silakan kirim email ke <a href="mailto:dharma@example.com">dharma@example.com</a>.
-   </p>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+    <!-- Form -->
+    <form id="msgForm" class="space-y-5" onsubmit="sendMessage(event)">
+      <!-- Nama -->
+      <div class="grid grid-cols-[120px_1fr] items-center gap-3">
+        <label for="nama" class="text-gray-800">Nama</label>
+        <input id="nama" type="text" placeholder="Nama"
+               class="border rounded-md w-full p-2" required>
+      </div>
+      <!-- Tanggal Lahir -->
+      <div class="grid grid-cols-[120px_1fr] items-center gap-3">
+        <label for="tgl" class="text-gray-800">Tanggal Lahir</label>
+        <input id="tgl" type="date" class="border rounded-md w-full p-2" required>
+      </div>
+      <!-- Jenis Kelamin -->
+      <div class="grid grid-cols-[120px_1fr] items-center gap-3">
+        <span class="text-gray-800">Jenis Kelamin</span>
+        <div class="flex items-center gap-6">
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="jk" id="jk-l" value="Laki - Laki" required>
+            <span>Laki-Laki</span>
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="jk" id="jk-p" value="Perempuan">
+            <span>Perempuan</span>
+          </label>
+        </div>
+      </div>
+      <!-- Pesan -->
+     <div class="grid grid-cols-[120px_1fr] items-start gap-3">
+  <label for="pesan" class="text-gray-800 mt-2">Pesan</label>
+  <textarea id="pesan" rows="5" placeholder="Pesan"
+            class="border rounded-md w-full p-2"></textarea>
+</div>
 
-<form>
-  <label for="user-message" class="block text-gray-700">Your Message:</label>
-  <input id="user-message" type="text" class="border rounded-md w-full p-2">
-  <button type="button" onclick="sendMessage();"
-   class="mt-2 bg-blue-500 text-white py-2 px-4 rounded-md">Send</button>
-</form>
+<!-- Row tombol -->
+<div class="grid grid-cols-[120px_1fr] items-start gap-3 mt-3">
+  <span></span> <!-- Kosong untuk posisi label -->
+  <div class="flex gap-2">
+    <button type="button" onclick="clearForm()"
+            class="border rounded-md py-2 px-4 bg-gray-200 hover:bg-gray-300">
+      Clear
+    </button>
+    <button type="submit"
+            class="border rounded-md py-2 px-4 bg-white hover:bg-gray-50">
+      Submit
+    </button>
+  </div>
+</div>
+    </form>
 
+    <!-- Preview -->
+    <div class="border rounded-md bg-white p-6">
+      <div id="preview" class="text-sm">
+        <p><strong>Current time</strong> : —</p>
+        <br>
+        <p><strong>Nama</strong> : —</p>
+        <p><strong>Tanggal Lahir</strong> : —</p>
+        <p><strong>Jenis Kelamin</strong> : —</p>
+        <p><strong>Pesan</strong> : —</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+</section>
 
    <hr />
 
