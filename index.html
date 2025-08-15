@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Dharma </title>
+    <title>Portofolio Dharma</title>
 
 <!-- CSS External -->
     <link rel="stylesheet" href="css\style.css">
@@ -12,21 +12,97 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
+
 <body>
 
     <!-- Main Header -->
-    <header>
+    <header class="flex items-center justify-between p-[16px]">
+        <!-- logo Icon -->
+       <div class="bg-purple-500 rounded-full h-[50px] w-[50px] main-logo"></div> 
 
+       <div class="flex-1 ml-[12px]">
+           <h1 class="text-lg font-bold text-gray-800">Dharma Prasetya Irawan</h1>
+           <p class="text-sm text-gray-600">Ilustrator Desain</p>
+       </div>
+
+       <nav>
+            <ul class="flex gap-[9px]">
+                <li><a href="#utama"
+                     class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Utama</a></li>
+                <li><a href="#tentang"
+                     class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Tentang</a></li>
+                <li><a href="#proyek"
+                     class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Proyek</a></li>
+                <li><a href="#kontak"
+                     class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">kontak</a></li>
+            </ul>
+       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
+    <hr />
 
+ 
+    <!-- Main Content -->
     </main>
+    <!-- Utama -->
+    <section id="utama" class="h-[400px] bg-gray-50">
+    <div class="flex items-center justify-center h-[400px]">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome <span id="user-tamu"></span> to Portofolio Dharma</h1>
+    </div>
+</section>
+    <hr />
+
+    <!-- Tentang -->
+    <section id="tentang" class="text-center h-[400px] bg-gray-200">
+    <header>    
+        <h1 class="text-4xl font-bold text-gray-800">Tentang Saya</h1>
+    </header>
+    <p class="text-gray-600">
+        Saya adalah seorang ilustrator desain dengan pengalaman dalam menciptakan karya seni yang menarik dan kreatif.
+    </p>
+</section>
+
+   <hr />
+
+    <!-- Proyek -->
+    <section id="proyek" class="text-center h-[400px] bg-gray-100">
+    <header>
+        <h1 class="text-4xl font-bold text-gray-800">Proyek Saya</h1>
+    </header>
+
+    <p class="text-gray-600">
+        Berikut adalah beberapa proyek yang telah saya kerjakan:
+    </p>
+</section>
+
+   <hr />
+
+    <!-- Kontak -->
+       <section id="kontak" class="h-[400px] bg-gray-300">
+   <header>
+       <h1 class="text-4xl font-bold text-gray-800">Kontak Saya</h1>
+   </header>
+
+   <p class="text-gray-600">
+       Jika Anda ingin menghubungi saya, silakan kirim email ke <a href="mailto:dharma@example.com">dharma@example.com</a>.
+   </p>
+
+<form>
+  <label for="user-message" class="block text-gray-700">Your Message:</label>
+  <input id="user-message" type="text" class="border rounded-md w-full p-2">
+  <button type="button" onclick="sendMessage();"
+   class="mt-2 bg-blue-500 text-white py-2 px-4 rounded-md">Send</button>
+</form>
+
+</section>
+
+
+   <hr />
 
     <!-- Footer -->
-    <footer>
-
+    <footer class="text-center p-[5px] bg-purple-500 text-white">
+        <span class="text-yellow-400">©2025 Dharma Prasetya Irawan. All rights reserved.</span>
     </footer>
 
 
